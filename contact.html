@@ -1,0 +1,83 @@
+<!-- <xml type="text/xml" scr=".github/workflows/info.xml"></xml> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratyush kumar: contact me</title>
+    <meta name="description"
+        content="Welcome to the portfolio website of Pratyush Kumar, a talented web developer from India. Explore his skills, projects, and contact him for collaborations.">
+    <meta name="keywords" content="Pratyush, web developer, portfolio, India, projects, contact, collaborations">
+    <meta name="author" content="Pratyush Kumar">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.jpg" />
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- custem Cursor -->
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+</head>
+
+<body>
+    <div id="hero">
+        <header>
+            <a href="#" id="logo">devloper</a>
+
+            <ul id="navlist">
+                <div id="hackex">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./profession">Profession</a></li>
+                    <li><a href="./link">LINKtree</a></li>
+                    <li><a href="./contact">Contact</a></li>
+                </div>
+                <li id="res"><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+            <ul id="sidebar">
+                <li id="ser"><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+
+                <a href="#" id="logo-sidebar">devloper</a>
+                <br>
+                <li><a href="./">Home</a></li>
+                <li><a href="./profession">Profession</a></li>
+                <li><a href="./link">LINKtree</a></li>
+                <li><a href="./contact">Contact</a></li>
+            </ul>
+        </header>
+        <div id="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                <input type="hidden" name="access_key" value="b8106827-1d91-46ef-a45f-2976a230c07b">
+                <div id="contact-left-title">
+                    <h2>Get in touch</h2>
+                    <hr>
+                </div>
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <button type="submit">Submit <img src="assets/arrow_icon.png" alt=""></button>
+            </form>
+            <div id="contact-img">
+                <img src="right_img.png" alt="">
+            </div>
+        </div>
+
+        <script src="contact.js"></script>
+        <!-- custem Cursor -->
+        <script src="https://unpkg.com/kursor"></script>
+        <script>
+            new kursor({
+                type: 1
+            })
+        </script>
+</body>
+
+</html>

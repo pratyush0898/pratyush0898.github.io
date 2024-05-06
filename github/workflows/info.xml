@@ -1,0 +1,66 @@
+<configuration>
+  <name>GitHub Pages CI</name>
+  <on>
+    <event>push</event>
+  </on>
+  <jobs>
+    <job name="build-and-deploy">
+      <runs-on>Windows-latest</runs-on>
+      <steps>
+        <step>
+          <uses>actions/checkout@v2</uses>
+        </step>
+        <step>
+          <name>Set up Node</name>
+          <uses>actions/setup-node@v1</uses>
+          <with>
+            <node-version>12.x</node-version>
+          </with>
+        </step>
+        <step>
+          <name>Install dependencies</name>
+          <run>npm install</run>
+        </step>
+        <step>
+          <name>Build</name>
+          <run>npm run build</run>
+        </step>
+        <step>
+          <name>Deploy</name>
+          <uses>JamesIves/github-pages-deploy-action@4.1.0</uses>
+          <with>
+            <branch>gh-pages</branch>
+            <folder>build</folder>
+          </with>
+        </step>
+      </steps>
+    </job>
+  </jobs>
+  <repository_name>nvmPratyush/nvmPratyush.github.io</repository_name>
+  <description>Explore my portfolio showcasing skills, projects, and professional background. Contact me for collaborations or inquiries. Built with HTML, CSS, and JavaScript. Visit nvmPratyush.github.io. Contributions welcome!</description>
+  <pages>
+    <page>
+      <name>Home</name>
+      <description>Introduction and overview of skills and expertise.</description>
+    </page>
+    <page>
+      <name>Contact</name>
+      <description>Various communication methods for collaborations or inquiries.</description>
+    </page>
+    <page>
+      <name>Professional Background</name>
+      <description>Detailed overview of professional background, education, and experience.</description>
+    </page>
+    <page>
+      <name>Projects</name>
+      <description>Selection of projects with brief descriptions and links.</description>
+    </page>
+  </pages>
+  <technologies>
+    <technology>HTML</technology>
+    <technology>CSS</technology>
+    <technology>JavaScript</technology>
+  </technologies>
+  <LICENSE>Apache License 2.0</LICENSE>
+</configuration>
+

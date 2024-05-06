@@ -1,0 +1,65 @@
+{
+  "name": "GitHub Pages CI",
+  "on": {
+    "push": {}
+  },
+  "jobs": {
+    "build-and-deploy": {
+      "runs-on": "Windows-latest",
+      "steps": [
+        {
+          "uses": "actions/checkout@v2"
+        },
+        {
+          "name": "Set up Node",
+          "uses": "actions/setup-node@v1",
+          "with": {
+            "node-version": "12.x"
+          }
+        },
+        {
+          "name": "Install dependencies",
+          "run": "npm install"
+        },
+        {
+          "name": "Build",
+          "run": "npm run build"
+        },
+        {
+          "name": "Deploy",
+          "uses": "JamesIves/github-pages-deploy-action@4.1.0",
+          "with": {
+            "branch": "gh-pages",
+            "folder": "build"
+          }
+        }
+      ]
+    }
+  },
+  "repository_name": "nvmPratyush/nvmPratyush.github.io",
+  "description": "Explore my portfolio showcasing skills, projects, and professional background. Contact me for collaborations or inquiries. Built with HTML, CSS, and JavaScript. Visit nvmPratyush.github.io. Contributions welcome!",
+  "pages": [
+    {
+      "name": "Home",
+      "description": "Introduction and overview of skills and expertise."
+    },
+    {
+      "name": "Contact",
+      "description": "Various communication methods for collaborations or inquiries."
+    },
+    {
+      "name": "Professional Background",
+      "description": "Detailed overview of professional background, education, and experience."
+    },
+    {
+      "name": "Projects",
+      "description": "Selection of projects with brief descriptions and links."
+    }
+  ],
+  "technologies": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "LICENSE": "Apache License 2.0"
+}
